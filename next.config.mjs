@@ -4,7 +4,6 @@ const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
   output: 'export',
   basePath: isProd ? '/Jaydip_Portfolio' : '',
-  assetPrefix: isProd ? '/Jaydip_Portfolio/' : '',
   images: {
     unoptimized: true,
   },

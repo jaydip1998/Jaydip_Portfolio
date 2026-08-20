@@ -26,11 +26,12 @@ export default function ScrollyCanvas() {
     const loadedImages: HTMLImageElement[] = [];
     let loadedCount = 0;
 
+    const basePath = process.env.NODE_ENV === "production" ? "/Jaydip_Portfolio" : "";
     for (let i = 0; i < FRAME_COUNT; i++) {
       const img = new Image();
       // Format number to 3 digits: 000, 001, ..., 119
       const formattedNumber = i.toString().padStart(3, '0');
-      img.src = `/sequence/frame_${formattedNumber}_delay-0.066s.png`;
+      img.src = `${basePath}/sequence/frame_${formattedNumber}_delay-0.066s.png`;
       
       img.onload = () => {
         loadedCount++;

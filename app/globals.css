@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 248, 250, 252;
+  --background-rgb: 5, 13, 24;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb));
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050D18;
+}
+::-webkit-scrollbar-thumb {
+  background: #122A47;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0FA3A3;
+}
+
+/* Glassmorphism Cards */
+.glass-panel {
+  background: rgba(11, 30, 51, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 163, 163, 0.15);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(15, 163, 163, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(15, 163, 163, 0.25), 0 0 20px rgba(242, 169, 59, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Glowing text and gradient utilities */
+.text-gradient-teal {
+  background: linear-gradient(135deg, #4BD5D5 0%, #0FA3A3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-amber {
+  background: linear-gradient(135deg, #F8C87A 0%, #F2A93B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-dual {
+  background: linear-gradient(135deg, #22C4C4 0%, #F5B757 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow effects */
+.glow-teal {
+  box-shadow: 0 0 25px rgba(15, 163, 163, 0.35);
+}
+
+.glow-amber {
+  box-shadow: 0 0 25px rgba(242, 169, 59, 0.35);
+}
+
